@@ -1,3 +1,4 @@
+import { NetworkBg } from "@/components/ui/network-bg";
 import { SplashScreen } from "@/components/layout/splash-screen";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -12,6 +13,7 @@ import { Contato } from "@/components/sections/contato";
 export default function HomePage() {
   return (
     <>
+      <NetworkBg />
       <SplashScreen />
       <Header />
       <main>
