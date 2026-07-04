@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 
 const isDev = process.env.NODE_ENV !== "production";
+// Só força HTTPS nos assets quando o site roda em HTTPS (NEXT_PUBLIC_SITE_URL https).
+// Em HTTP (ex: domínio temp sslip.io), isso quebraria os assets.
+const httpsEnabled = (process.env.NEXT_PUBLIC_SITE_URL ?? "").startsWith("https");
 
 const csp = [
   "default-src 'self'",
@@ -13,7 +16,7 @@ const csp = [
   "style-src 'self' 'unsafe-inline'",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
   "connect-src 'self'",
-  ...(isDev ? [] : ["upgrade-insecure-requests"])
+  ...(httpsEnabled ? ["upgrade-insecure-requests"] : [])
 ].join("; ");
 
 const securityHeaders = [
