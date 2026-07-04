@@ -50,7 +50,7 @@ export function Carrossel() {
         </Reveal>
 
         <Reveal delay={0.05}>
-          <div className="mt-12 flex snap-x gap-4 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="mt-12 flex snap-x gap-4 overflow-x-auto px-1 py-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {slides.map((s, i) => (
               <SlideCard key={i} {...s} />
             ))}

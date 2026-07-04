@@ -9,6 +9,7 @@ import { ComoFunciona } from "@/components/sections/como-funciona";
 import { Codigo } from "@/components/sections/codigo";
 import { Carrossel } from "@/components/sections/carrossel";
 import { KortexOS } from "@/components/sections/kortexos";
+import { Clientes } from "@/components/sections/clientes";
 import { Cases } from "@/components/sections/cases";
 import { Contato } from "@/components/sections/contato";
 
@@ -26,6 +27,7 @@ export default function HomePage() {
         <Codigo />
         <Carrossel />
         <KortexOS />
+        <Clientes />
         <Cases />
         <Contato />
       </main>
