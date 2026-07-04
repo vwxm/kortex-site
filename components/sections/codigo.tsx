@@ -36,7 +36,7 @@ export function Codigo() {
     <section className="scroll-mt-20 py-28">
       <div className="container-x grid items-center gap-14 lg:grid-cols-2">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">02 / feito à mão</p>
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">{`// feito à mão`}</p>
           <h2 className="mt-6 font-display text-4xl font-bold uppercase leading-tight text-stone md:text-5xl">
             A gente escreve o código
           </h2>

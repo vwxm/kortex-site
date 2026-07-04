@@ -46,7 +46,7 @@ export function Contato() {
     <section id="contato" className="scroll-mt-20 border-t border-white/10 py-28">
       <div className="container-x grid gap-14 lg:grid-cols-[0.85fr_1.15fr]">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">06 / contato</p>
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">{`// contato`}</p>
           <h2 className="mt-6 font-display text-4xl font-bold uppercase leading-tight text-stone md:text-6xl">
             Vamos conversar
           </h2>

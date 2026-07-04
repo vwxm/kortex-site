@@ -11,7 +11,7 @@ export function KortexOS() {
     <section id="kortexos" className="scroll-mt-20 py-28">
       <div className="container-x">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">04 / a plataforma</p>
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">{`// a plataforma`}</p>
           <h2 className="mt-6 max-w-5xl font-display text-4xl font-bold uppercase leading-[1.05] text-stone md:text-6xl">
             Tudo roda no <span className="text-neon">KortexOS</span>
           </h2>

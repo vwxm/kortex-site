@@ -39,7 +39,7 @@ export function Carrossel() {
     <section id="marketing" className="scroll-mt-20 border-y border-white/10 bg-graphite/40 py-28">
       <div className="container-x">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">03 / marketing</p>
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">{`// marketing`}</p>
           <h2 className="mt-6 max-w-4xl font-display text-4xl font-bold uppercase leading-tight text-stone md:text-6xl">
             Conteúdo que a gente entrega
           </h2>

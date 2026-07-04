@@ -67,7 +67,7 @@ export function Cases() {
     <section id="cases" className="scroll-mt-20 py-28">
       <div className="container-x">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">05 / cases</p>
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">{`// cases`}</p>
           <h2 className="mt-6 max-w-4xl font-display text-4xl font-bold uppercase leading-tight text-stone md:text-6xl">
             Trabalho entregue, no ar
           </h2>
