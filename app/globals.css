@@ -61,5 +61,52 @@ body::before {
 }
 
 .focus-ring:focus-visible {
-  outline-color: #e7e7e2;
+  outline-color: #22e5a0;
 }
+
+/* Card de vidro com varredura de luz no hover */
+.glass {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 229, 160, 0.4);
+  box-shadow: 0 0 40px -8px rgba(34, 229, 160, 0.35);
+}
+
+.glass::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 45%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  transform: skewX(-18deg);
+  transition: left 0.75s ease;
+}
+
+.glass:hover::after {
+  left: 130%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass {
+    transition: none;
+  }
+  .glass:hover {
+    transform: none;
+  }
+  .glass::after {
+    display: none;
+  }
+}
+

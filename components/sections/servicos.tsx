@@ -1,41 +1,40 @@
+import { Bot, Globe, Workflow, LayoutGrid, Search, Megaphone, Star, type LucideIcon } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 
-type Servico = { titulo: string; texto: string };
+type Servico = { icon: LucideIcon; titulo: string; texto: string };
 
 const tecnologia: Servico[] = [
-  { titulo: "Automações", texto: "Fluxos que rodam sozinhos — integrações, tarefas repetitivas e dados conectados ponta a ponta." },
-  { titulo: "Sites", texto: "Sites premium, rápidos e sob medida, do institucional à vitrine com painel próprio." },
-  { titulo: "Atendimento com IA", texto: "Chatbots e agentes que atendem, qualificam e vendem 24 horas por dia." }
+  { icon: Workflow, titulo: "Automações", texto: "Tarefa repetitiva vira fluxo automático. Sua equipe para de perder tempo com o operacional." },
+  { icon: Globe, titulo: "Sites", texto: "Sites rápidos e bonitos, que carregam em segundos e transformam visita em cliente." },
+  { icon: Bot, titulo: "Atendimento", texto: "Um assistente que responde na hora, qualifica e agenda. De madrugada também." }
 ];
 
 const marketing: Servico[] = [
-  { titulo: "Conteúdo", texto: "Carrosséis e posts com a identidade da marca, produzidos em escala." },
-  { titulo: "SEO", texto: "Ser encontrado no Google: on-page, conteúdo e monitoramento contínuo." },
-  { titulo: "Anúncios", texto: "Campanhas no Google e Meta, montadas, lançadas e otimizadas por dados." },
-  { titulo: "Avaliações", texto: "Gestão de reviews com respostas humanas que protegem a reputação." }
+  { icon: LayoutGrid, titulo: "Conteúdo", texto: "Carrosséis e posts prontos, com a cara da sua marca, toda semana." },
+  { icon: Search, titulo: "SEO", texto: "Seu negócio aparecendo no Google na hora que o cliente procura." },
+  { icon: Megaphone, titulo: "Anúncios", texto: "Campanhas no Google e Instagram que trazem contato de verdade, não curtida." },
+  { icon: Star, titulo: "Avaliações", texto: "Resposta pra cada review, protegendo e melhorando a sua reputação." }
 ];
 
-function Item({ n, titulo, texto }: Servico & { n: number }) {
+function Card({ icon: Icon, titulo, texto }: Servico) {
   return (
-    <div className="group border-t border-white/12 py-8 transition">
-      <div className="flex items-baseline gap-6">
-        <span className="font-display text-sm text-white/25">{String(n).padStart(2, "0")}</span>
-        <div>
-          <h3 className="font-display text-xl font-bold uppercase tracking-wide text-stone md:text-2xl">{titulo}</h3>
-          <p className="mt-3 max-w-md text-sm font-light leading-7 text-white/50">{texto}</p>
-        </div>
+    <div className="glass h-full p-6">
+      <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 bg-neon/10 text-neon">
+        <Icon size={20} />
       </div>
+      <h3 className="mt-5 font-display text-base font-bold uppercase tracking-wide text-stone">{titulo}</h3>
+      <p className="mt-3 text-sm leading-6 text-white/55">{texto}</p>
     </div>
   );
 }
 
-function Grupo({ label, itens, start }: { label: string; itens: Servico[]; start: number }) {
+function Grupo({ label, itens }: { label: string; itens: Servico[] }) {
   return (
     <div>
-      <p className="mb-2 text-xs uppercase tracking-[0.3em] text-white/40">{label}</p>
-      <div className="grid md:grid-cols-2">
-        {itens.map((s, i) => (
-          <Item key={s.titulo} n={start + i} {...s} />
+      <p className="mb-5 font-mono text-xs uppercase tracking-[0.24em] text-neon">{`// ${label}`}</p>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {itens.map((s) => (
+          <Card key={s.titulo} {...s} />
         ))}
       </div>
     </div>
@@ -47,22 +46,22 @@ export function Servicos() {
     <section id="servicos" className="scroll-mt-20 py-28">
       <div className="container-x">
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.3em] text-white/45">01 / Serviços</p>
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">01 / serviços</p>
           <h2 className="mt-6 max-w-4xl font-display text-4xl font-bold uppercase leading-tight text-stone md:text-6xl">
-            Tecnologia e marketing sob o mesmo teto
+            Duas frentes, um time só
           </h2>
           <p className="mt-6 max-w-2xl text-base leading-7 text-white/55">
-            Da automação que economiza horas ao conteúdo que traz cliente — tudo
-            integrado e medido dentro do KortexOS.
+            A Kortex constrói a tecnologia e cuida do marketing. Você não precisa
+            de uma agência pra criar e outra pra divulgar.
           </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-16">
+        <div className="mt-16 grid gap-14">
           <Reveal>
-            <Grupo label="Tecnologia" itens={tecnologia} start={1} />
+            <Grupo label="tecnologia" itens={tecnologia} />
           </Reveal>
           <Reveal delay={0.05}>
-            <Grupo label="Marketing" itens={marketing} start={4} />
+            <Grupo label="marketing" itens={marketing} />
           </Reveal>
         </div>
       </div>

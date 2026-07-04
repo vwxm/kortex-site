@@ -46,13 +46,13 @@ export function Contato() {
     <section id="contato" className="scroll-mt-20 border-t border-white/10 py-28">
       <div className="container-x grid gap-14 lg:grid-cols-[0.85fr_1.15fr]">
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.3em] text-white/45">04 / Contato</p>
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">06 / contato</p>
           <h2 className="mt-6 font-display text-4xl font-bold uppercase leading-tight text-stone md:text-6xl">
             Vamos conversar
           </h2>
           <p className="mt-7 max-w-md text-base leading-7 text-white/55">
-            Conta o que você precisa — automação, site, atendimento ou marketing.
-            Respondemos rápido.
+            Conta o que você precisa: automação, site, atendimento ou marketing.
+            A gente responde rápido.
           </p>
           <a
             href={whatsappUrl("Olá! Quero falar com a Kortex sobre um projeto.")}

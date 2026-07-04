@@ -10,8 +10,8 @@ export function Footer() {
         <div>
           <Logo className="text-base" />
           <p className="mt-6 max-w-sm text-sm leading-7 text-white/50">
-            Tecnologia e marketing com inteligência artificial. Cada projeto
-            opera no KortexOS — a plataforma de IA da Kortex.
+            Estúdio de tecnologia e marketing. A gente constrói o produto e cuida
+            do crescimento, tudo rodando no KortexOS.
           </p>
         </div>
         <div className="grid gap-3 text-sm uppercase tracking-[0.16em] text-white/55">

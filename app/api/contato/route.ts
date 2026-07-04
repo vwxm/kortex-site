@@ -51,7 +51,7 @@ async function entregar(lead: Lead): Promise<boolean> {
       from: process.env.RESEND_FROM ?? "Kortex Site <onboarding@resend.dev>",
       to,
       replyTo: lead.email,
-      subject: `Novo contato pelo site — ${lead.nome}`,
+      subject: `Novo contato pelo site: ${lead.nome}`,
       text: linhas
     });
     return !error;

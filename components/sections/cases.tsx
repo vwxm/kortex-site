@@ -44,7 +44,7 @@ function CasoCard({ cliente, segmento, descricao, tags, url }: Caso) {
           </span>
         </div>
         {url ? (
-          <div className="absolute bottom-6 right-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-white/70 transition group-hover:text-white">
+          <div className="absolute bottom-6 right-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.24em] text-neon transition group-hover:text-white">
             Ver ao vivo
             <ArrowUpRight size={16} className="transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transition-none" />
           </div>
@@ -67,7 +67,7 @@ export function Cases() {
     <section id="cases" className="scroll-mt-20 py-28">
       <div className="container-x">
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.3em] text-white/45">03 / Cases</p>
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">05 / cases</p>
           <h2 className="mt-6 max-w-4xl font-display text-4xl font-bold uppercase leading-tight text-stone md:text-6xl">
             Trabalho entregue, no ar
           </h2>
