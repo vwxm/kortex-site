@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: #08080b;
+  color: #e7e8ee;
+  font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Grid técnico sutil no fundo */
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  opacity: 0.5;
+  background:
+    radial-gradient(1200px 600px at 70% -10%, rgba(46, 75, 216, 0.12), transparent 70%),
+    radial-gradient(900px 500px at 10% 110%, rgba(46, 75, 216, 0.08), transparent 70%);
+}
+
+::selection {
+  background: #2e4bd8;
+  color: #fff;
+}
+
+.container-x {
+  width: min(100% - 32px, 1200px);
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .container-x {
+    width: min(100% - 80px, 1200px);
+  }
+}
+
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+}
+
+.focus-ring:focus-visible {
+  outline-color: #4c6bf0;
+}
