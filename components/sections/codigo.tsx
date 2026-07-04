@@ -14,7 +14,7 @@ function CodeWindow() {
         <span className="h-3 w-3 rounded-full bg-white/15" />
         <span className="h-3 w-3 rounded-full bg-white/15" />
         <span className="ml-3 font-mono text-xs text-white/40">automacoes/novo-lead.ts</span>
-        <span className="ml-auto font-mono text-[10px] uppercase tracking-widest text-neon">KortexOS</span>
+        <span className="ml-auto font-mono text-[10px] uppercase tracking-widest text-neon">Kortex<span className="text-white/50">OS</span></span>
       </div>
       <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-6">
         <code className={mut}>

@@ -13,7 +13,7 @@ export function KortexOS() {
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-neon">{`// a plataforma`}</p>
           <h2 className="mt-6 max-w-5xl font-display text-4xl font-bold uppercase leading-[1.05] text-stone md:text-6xl">
-            Tudo roda no <span className="text-neon">KortexOS</span>
+            Tudo roda no Kortex<span className="text-neon">OS</span>
           </h2>
           <p className="mt-7 max-w-2xl text-base leading-7 text-white/55">
             O KortexOS é a plataforma que a Kortex usa pra tocar cada projeto. Ele

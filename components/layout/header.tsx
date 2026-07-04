@@ -9,7 +9,7 @@ import { whatsappUrl } from "@/lib/utils";
 const nav = [
   { href: "#servicos", label: "Serviços" },
   { href: "#marketing", label: "Marketing" },
-  { href: "#kortexos", label: "KortexOS" },
+  { href: "#kortexos", label: "Kortex OS" },
   { href: "#contato", label: "Contato" }
 ];
 

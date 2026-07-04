@@ -16,7 +16,7 @@ export function Footer() {
         </div>
         <div className="grid gap-3 text-sm uppercase tracking-[0.16em] text-white/55">
           <a href="#servicos" className="transition hover:text-white">Serviços</a>
-          <a href="#kortexos" className="transition hover:text-white">KortexOS</a>
+          <a href="#kortexos" className="transition hover:text-white">Kortex OS</a>
           <a href="#cases" className="transition hover:text-white">Cases</a>
           <a href="#contato" className="transition hover:text-white">Contato</a>
         </div>
