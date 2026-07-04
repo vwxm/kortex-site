@@ -9,19 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#08080B",
-        surface: "#101016",
-        stone: "#E7E8EE",
-        steel: "#9AA0AE",
-        accent: "#2E4BD8",
-        "accent-hi": "#4C6BF0"
+        ink: "#0B0B0A",
+        graphite: "#151514",
+        surface: "#1A1A18",
+        stone: "#E7E7E2",
+        steel: "#9A9A94"
       },
       fontFamily: {
-        display: ["var(--font-display)", "Space Grotesk", "sans-serif"],
-        body: ["var(--font-body)", "Inter", "sans-serif"]
+        display: ["var(--font-display)", "Syncopate", "sans-serif"],
+        body: ["var(--font-body)", "Manrope", "sans-serif"]
       },
       boxShadow: {
-        glow: "0 0 80px -20px rgba(46, 75, 216, 0.55)"
+        soft: "0 24px 80px rgba(0, 0, 0, 0.35)"
       }
     }
   },

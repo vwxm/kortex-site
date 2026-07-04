@@ -1,3 +1,4 @@
+import { SplashScreen } from "@/components/layout/splash-screen";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
@@ -9,6 +10,7 @@ import { Contato } from "@/components/sections/contato";
 export default function HomePage() {
   return (
     <>
+      <SplashScreen />
       <Header />
       <main>
         <Hero />

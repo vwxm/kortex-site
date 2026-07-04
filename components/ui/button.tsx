@@ -3,15 +3,15 @@ import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const variants = {
-  primary: "bg-accent text-white hover:bg-accent-hi",
-  outline: "border border-white/15 text-stone hover:border-accent-hi hover:text-white",
-  ghost: "text-steel hover:text-white"
+  primary: "border-b border-stone/40 text-stone hover:border-stone",
+  ghost: "border-b border-white/20 text-white/55 hover:border-white/70 hover:text-white",
+  dark: "border-b border-ink/40 text-ink hover:border-ink"
 };
 
 export type ButtonVariant = keyof typeof variants;
 
 const base =
-  "focus-ring group inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold tracking-wide transition";
+  "focus-ring group inline-flex items-center justify-center gap-2 pb-2 text-xs font-semibold uppercase tracking-[0.28em] transition";
 
 export function buttonClass(variant: ButtonVariant = "primary", className?: string) {
   return cn(base, variants[variant], className);
@@ -20,7 +20,7 @@ export function buttonClass(variant: ButtonVariant = "primary", className?: stri
 export function ButtonArrow() {
   return (
     <ArrowRight
-      size={16}
+      size={15}
       className="transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0"
     />
   );
