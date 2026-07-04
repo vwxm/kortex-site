@@ -1,7 +1,14 @@
 import { Reveal } from "@/components/ui/reveal";
 
 // TODO: trocar por logos reais quando o cliente enviar (public/clientes/*.svg).
-const clientes = ["Tomé Motors", "Clínica de Nutrição", "Comércio de Cabides", "Seu negócio aqui"];
+const clientes = [
+  "Tomé Motors",
+  "Cabide de Madeira",
+  "TJR iPhone",
+  "TS Cabides",
+  "Cabides Online",
+  "Imobiliária Moreira"
+];
 
 function Faixa() {
   return (
