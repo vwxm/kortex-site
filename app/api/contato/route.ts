@@ -72,6 +72,19 @@ async function entregar(lead: Lead): Promise<boolean> {
   return true;
 }
 
+async function enviarParaCrm(lead: Lead): Promise<void> {
+  const url = process.env.CRM_LEADS_URL;
+  const secret = process.env.CRM_INGEST_SECRET;
+  if (!url || !secret) return; // integração opcional; sem configurar, só loga por e-mail como já fazia
+
+  const contato = [lead.email, lead.telefone].filter(Boolean).join(" / ");
+  await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "X-Kortex-Secret": secret },
+    body: JSON.stringify({ nome: lead.nome, contato, origem: "Site", mensagem: lead.mensagem })
+  });
+}
+
 export async function POST(request: Request) {
   const ip =
     request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
@@ -94,8 +107,9 @@ export async function POST(request: Request) {
     mensagem: body.mensagem.trim()
   };
 
-  // TODO (Fase CRM): além de entregar por e-mail, gravar o lead no CRM
-  // (pipeline de aquisição). O contrato desta rota não muda pra UI.
+  // Gravar o lead no CRM (pipeline de aquisição), em paralelo ao e-mail.
+  // Fire-and-forget: falha na integração não impede o lead de chegar por e-mail.
+  enviarParaCrm(lead).catch((e) => console.error("[contato] falha ao enviar pro CRM:", e));
 
   const ok = await entregar(lead).catch((e) => {
     console.error("[contato] falha ao entregar:", e);
